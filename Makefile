@@ -1,6 +1,6 @@
 NAME	= sed
 
-SRCS	= Sed.cpp Evenement.cpp main.cpp
+SRCS	= Sed.cpp Evenement.cpp Arrivee.cpp FinDeService.cpp main.cpp
 
 OBJS	= $(SRCS:.cpp=.o)
 

@@ -14,8 +14,8 @@ class	Evenement
 		public:
 			Evenement(void);
 			Evenement(double);
-			~Evenement(void);
+			virtual ~Evenement(void);
 			double	getHeure(void) const;
-			void	traiter(void);
+			virtual void	traiter(void) = 0;
 };
 #endif

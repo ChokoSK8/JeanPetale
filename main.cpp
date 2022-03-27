@@ -1,11 +1,12 @@
 # include "Evenement.h"
 # include "Sed.h"
+# include "Arrivee.h"
 
 int	main()
 {
-	Evenement	one(4);
-	Evenement	two(8);
-	Evenement	three(2);
+	Arrivee	one (4);
+	Arrivee	two (8);
+	FinDeService	three(2);
 
 	Sed			sedi(0);
 

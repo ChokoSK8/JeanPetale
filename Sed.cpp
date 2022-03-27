@@ -19,23 +19,23 @@ Sed::~Sed(void)
 void	Sed::ajouter(Evenement e)
 {
 	if (!_events.size())
-		_events.push_back(e);
+		_events.push_back(&e);
 	else
 	{
-		auto i = _events.cbegin();
-		while (i != _events.cend())
+		std::vector<Evenement*>::iterator	i = _events.begin();
+		while (i != _events.end())
 		{
-			if (i->getHeure() < e.getHeure())
+			if ((*i)->getHeure() < e.getHeure())
 				break;
 			i++;
 		}
-		_events.insert(i, e);
+		_events.insert(i, &e);
 	}
 }
 
 void	Sed::lancer(void)
 {
-	std::vector<Evenement>::iterator	i;
+	std::vector<Evenement*>::iterator	i;
 
 	while (_events.size())
 	{
@@ -46,7 +46,7 @@ void	Sed::lancer(void)
 			sleep((unsigned int)(diff - 1));
 		while (diff > 0)
 			diff = i.getHeure() - actual.tm_sec;*/
-		i->traiter();
+		(*i)->traiter();
 		_events.pop_back();
 	//	delete i;
 	}

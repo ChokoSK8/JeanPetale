@@ -20,11 +20,3 @@ double	Evenement::getHeure(void) const
 {
 	return _heure;
 }
-
-#include <stdio.h>
-
-void	Evenement::traiter(void)
-{
-	std::cout << "Evenement is treated" << std::endl;
-	printf("Time of event : %.f\n", this->getHeure());
-}
