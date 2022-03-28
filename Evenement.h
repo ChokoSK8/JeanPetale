@@ -12,7 +12,6 @@ class	Evenement
 			double	_heure;
 
 		public:
-			Evenement(void);
 			Evenement(double);
 			virtual ~Evenement(void);
 			double	getHeure(void) const;

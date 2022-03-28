@@ -18,7 +18,7 @@ class	Sed
 			Sed(double);
 			~Sed(void);
 			void	lancer(void);
-			void	ajouter(Evenement e);
+			void	ajouter(Evenement &);
 			double	getHeure(void) const;
 };
 #endif

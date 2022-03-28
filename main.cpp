@@ -1,6 +1,7 @@
 # include "Evenement.h"
 # include "Sed.h"
 # include "Arrivee.h"
+# include "FinDeService.h"
 
 int	main()
 {

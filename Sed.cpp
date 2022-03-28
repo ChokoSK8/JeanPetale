@@ -16,7 +16,7 @@ Sed::~Sed(void)
 	std::cout << "Sed destructor called" << std::endl;
 }
 
-void	Sed::ajouter(Evenement e)
+void	Sed::ajouter(Evenement &e)
 {
 	if (!_events.size())
 		_events.push_back(&e);
